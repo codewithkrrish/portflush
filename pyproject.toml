@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "portflush"
+version = "1.0.0"
+description = "Find and free whatever is listening on a port — end the EADDRINUSE dance in one command."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Krrish" }]
+keywords = ["port", "process", "cli", "devtools"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: System :: Systems Administration",
+]
+
+[project.scripts]
+portflush = "portflush.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/codewithkrrish/portflush"
+
+[tool.setuptools.packages.find]
+include = ["portflush*"]
